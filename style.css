@@ -29,9 +29,11 @@
 
 .link-wpp { color: #25D366; }
 .link-insta { color: #E1306C; } 
+
 .topbar i {
     font-size: 24px; 
 }
+
 .topbar a:hover {
     transform: scale(1.2); 
 }
@@ -75,9 +77,11 @@ nav ul li a {
 .btn-doe {
     background-color: #F39200;
     color: white !important; 
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 50px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    display:inline-block;
 }
 
 .btn-doe:hover {
@@ -114,4 +118,18 @@ nav ul li a {
     color: #555;
     max-width: 800px;
     margin: 0 auto;
+}
+/*footer*/
+
+footer{
+    background-color: #222;
+    padding:30px 20 px;
+    text-align: center;
+}
+footer h5{
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font size: 12px;
+    line-height:1.8;
+    font-weight:normal;
 }
