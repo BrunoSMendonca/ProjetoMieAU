@@ -8,13 +8,13 @@
 /* TOPBAR */
 .topbar { 
     background-color: #e0f4ff; 
-    padding: 10px 0; /* Reduzi um pouco a altura para ficar mais discreto */
+    padding: 10px 0; 
     border-bottom: 1px solid rgba(0,0,0,0.05);  
 }
 
 .topbar .container {
     display: flex;
-    justify-content: flex-end; /* Alinha os ícones na direita */
+    justify-content: flex-end; 
     align-items: center;
     gap: 20px;
     max-width: 1200px;
@@ -28,11 +28,9 @@
 }
 
 .link-wpp { color: #25D366; }
-.link-insta { color: #E1306C; } /* Cor padrão do Instagram */
-
+.link-insta { color: #E1306C; } 
 .topbar i {
-    font-size: 24px; /* Tamanho equilibrado para ícones sociais */
-}
+    font-size: 24px; 
 
 .topbar a:hover {
     transform: scale(1.2); 
