@@ -14,3 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    const botoesAdotar = document.querySelectorAll(".btn-adotar-pet");
+
+    botoesAdotar.forEach(botao=>{
+        botao.addEventListener('click', function(event){
+            event.preventDefault();
+
+            const nomePet =this.getAttribute('data-pet');
+            const numeroLarTemporario = this.getAttribute('data-phone');
+
+            const mensagem = encodeURIComponent(` Oi! Vi o(a) ${nomePet} no site MieAU e gostaria de saber como posso adotar!`);
+            const urlWhatsApp = `https://wa.me/${numeroLarTemporario}?text=${mensagem}`;
+
+            window.open(urlWhatsApp, 'blank');
+        });    
+    });
+});

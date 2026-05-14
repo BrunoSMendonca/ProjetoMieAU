@@ -154,6 +154,41 @@ p {
     font-weight: bold;
     font-size: 1.5rem;
 }
+
+.animaisAdocao{
+    background-color: #e0f4ff;
+}
+.animaisAdocao section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    
+    
+}
+.adote{
+    width: 320px;
+    background-color: #e0f4ff;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3 ease;
+}
+. adote :hover{
+    transform: translateY(-10px);
+}
+.adote img{
+    
+    width: 100%;
+    height: 200px;
+    
+    border-radius: 10px;
+    background-image: radial-gradient(circle at center 30%, #e0f4ff 0%, transparent 50%);
+    
+}
     
 
 /*footer*/
