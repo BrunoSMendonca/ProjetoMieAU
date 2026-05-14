@@ -34,7 +34,7 @@
     font-size: 24px; 
 }
 
-.topbar a:hover {
+.topbar a:hover{
     transform: scale(1.2); 
 }
 
@@ -155,36 +155,70 @@ p {
     font-size: 1.5rem;
 }
 
+
+
 .animaisAdocao{
     background-color: #e0f4ff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.animaisAdocao header{
+    background-color: #e0f4ff
 }
 .animaisAdocao section {
-    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
     align-items: flex-start;
+    padding: 20px;        
+}
+
+.container-pets {
+    display: flex;
+    flex-wrap: wrap;       
+    justify-content: center;
+    gap: 30px;
     padding: 20px;
-    
-    
 }
 .adote{
     width: 320px;
-    background-color: #e0f4ff;
+    background-color: #efffff;
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     overflow: hidden;
-    transition: transform 0.3 ease;
+    transition: transform 0.3s ease;
+    gap: 20px;
 }
-. adote :hover{
+
+.adote details {
+    padding: 10px;
+    cursor: pointer; 
+}
+
+.adote summary {
+    color: #F39200; 
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.adote ul {
+    list-style: none; 
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; 
+    margin-bottom: 10px;
+}
+
+.adote:hover{
     transform: translateY(-10px);
 }
 .adote img{
     
     width: 100%;
     height: 200px;
-    
     border-radius: 10px;
     background-image: radial-gradient(circle at center 30%, #e0f4ff 0%, transparent 50%);
     
@@ -201,7 +235,7 @@ footer{
 footer h5{
     color: #eee;
     font-family: Arial, Helvetica, sans-serif;
-    font size: 12px;
+    font-size: 12px;
     line-height:1.8;
     font-weight:normal;
 }
