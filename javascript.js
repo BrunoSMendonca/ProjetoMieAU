@@ -33,16 +33,3 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
-
-document.addEventListener('DOMcontent loaded', function(){
-    const botaoEnviar =document.querySelectorAll(".submit");
-    botao.addEventListener('click'), function(event){
-        event.prevevntDefault();
-
-        const nome=getElementById('nome');
-        if nome <= 3;
-        elif nome =(" ");
-        addEventListener("Preencha com nome valido")
-        else=
-    }
-}
