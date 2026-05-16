@@ -28,8 +28,34 @@ document.addEventListener('DOMContentLoaded', function(){
             const mensagem = encodeURIComponent(` Oi! Vi o(a) ${nomePet} no site MieAU e gostaria de saber como posso adotar!`);
             const urlWhatsApp = `https://wa.me/${numeroLarTemporario}?text=${mensagem}`;
 
-            window.open(urlWhatsApp, 'blank');
+            window.open(urlWhatsApp, '_blank');
         });    
     });
 });
 
+   
+let index = 0;
+    const trilho = document.querySelector('.container-pets');
+    const btnProximo = document.querySelector('.btn-proximo');
+    const btnAnterior = document.querySelector('.btn-anterior');
+    const totalPets= 10;
+
+    if(btnProximo){
+btnProximo.addEventListener('click', function() {
+    if (index >= totalPets -1){
+        index=0;
+    }else{
+    index++;
+    } 
+    trilho.style.transform = `translateX(${-index * 350}px)`; 
+});
+}
+    if(btnAnterior){
+btnAnterior.addEventListener('click', function() {
+    if (index <= 0){
+        index=totalPets-1;
+        }else{
+    index--;}
+     trilho.style.transform = `translateX(${-index * 350}px)`;    
+});
+    }

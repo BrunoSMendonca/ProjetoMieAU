@@ -163,26 +163,21 @@ p {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
 }
 
 .animaisAdocao header{
     background-color: #e0f4ff
 }
 .animaisAdocao section {
-    flex-wrap: wrap;
+
     gap: 30px;
     align-items: flex-start;
     padding: 20px;        
 }
 
-.container-pets {
-    display: flex;
-    flex-wrap: wrap;       
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-}
 .adote{
     width: 320px;
     background-color: #efffff;
@@ -192,6 +187,7 @@ p {
     overflow: hidden;
     transition: transform 0.3s ease;
     gap: 20px;
+    flex-shrink: 0;
 }
 
 .adote details {
@@ -223,7 +219,51 @@ p {
     background-image: radial-gradient(circle at center 30%, #e0f4ff 0%, transparent 50%);
     
 }
-    
+/*Carrossel imagem*/
+
+
+.container-pets {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    gap: 30px;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out; 
+}
+
+/*Botões do carrossel */
+
+.carrossel-wrapper {
+    position: relative; 
+    width: 100%;
+    max-width: 1100px; 
+    margin: 0 auto;
+    overflow: hidden;  
+}
+
+
+.btn-anterior, .btn-proximo {
+    position: absolute;  
+    top: 50%;            
+    transform: translateY(-50%);
+    z-index: 10;         
+   
+    background-color: #e0f4ff;
+    color: #F39200;
+    border: 2px solid black;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%; 
+}
+
+.btn-anterior {
+    left: 10px;
+}
+
+.btn-proximo {
+    right: 10px;
+}
+
 
 /*footer*/
 
