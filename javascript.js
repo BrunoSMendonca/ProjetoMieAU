@@ -59,3 +59,32 @@ btnAnterior.addEventListener('click', function() {
      trilho.style.transform = `translateX(${-index * 350}px)`;    
 });
     }
+
+const nome = document.getElementById('nome').value;
+const telefone = document.getElementById('tel').value;
+const email = document.getElementById('email').value;
+const regexNome = /^[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+(?:\s+(?:[a-zà-ÿ']+|[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+)+)+$/;
+const regexTelefone = /^\([1-9]{2}\) (?:9)?[0-9]{4}-[0-9]{4}$/;
+const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+
+if (regexNome.test(nome)){
+
+if (regexTelefone.test(telefone)){
+
+if(regexEmail.test(email)){
+
+    formulatio.submit();
+    alert("Formulário Enviado com Sucesso!");
+
+    }else{
+        alert("Digite um E-mail Valido")
+    }
+    }else{
+    alert("Digite um telefone Valido (xx) 9xxxx-xxxx!!! ");
+}
+    }else{
+    alert("Digite um nome completa valido ex(Bruno Silva) !!! ");
+}
+
+    
