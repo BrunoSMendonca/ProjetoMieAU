@@ -60,38 +60,40 @@ btnAnterior.addEventListener('click', function() {
 });
     }
 
-const Formulário =document.getElementById('seu-id-do-Formulário')
-if (Formulário){
-    Formulário.addEventListener('submit', function(event){
-        event.preventDefault();
+const formulario = document.getElementById('seu-id-do-formulario');
 
-const nome = document.getElementById('nome').value;
-const telefone = document.getElementById('tel').value;
-const email = document.getElementById('email').value;
-const regexNome = /^[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+(?:\s+(?:[a-zà-ÿ']+|[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+)+)+$/;
-const regexTelefone = /^\([1-9]{2}\) (?:9)?[0-9]{4}-[0-9]{4}$/;
-const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+if (formulario) {
+    formulario.addEventListener('submit', function(event) { 
+        
+        event.preventDefault(); 
 
+       
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('tel').value;
+        const email = document.getElementById('email').value;
 
-if (regexNome.test(nome)){
+        const regexNome = /^[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+(?:\s+(?:[a-zà-ÿ']+|[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+)+)+$/;
+        const regexTelefone = /^\([1-9]{2}\) (?:9)?[0-9]{4}-[0-9]{4}$/;
+        const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-if (regexTelefone.test(telefone)){
+        if (regexNome.test(nome)) {
+            if (regexTelefone.test(telefone)) {
+                if (regexEmail.test(email)) {
+                    
+                    alert("Formulário Enviado com Sucesso!");
+                    formulario.submit(); 
 
-if(regexEmail.test(email)){
+                } else {
+                    alert("Digite um E-mail Valido");
+                }
+            } else {
+                alert("Digite um telefone Valido (xx) 9xxxx-xxxx!!! ");
+            }
+        } else {
+            alert("Digite um nome completo valido ex(Bruno Silva) !!! ");
+        }
 
-    formulario.submit();
-    alert("Formulário Enviado com Sucesso!");
-
-    }else{
-        alert("Digite um E-mail Valido")
-    }
-    }else{
-    alert("Digite um telefone Valido (xx) 9xxxx-xxxx!!! ");
-}
-    }else{
-    alert("Digite um nome completa valido ex(Bruno Silva) !!! ");
-}
-});
+    }); 
 }
 
     
