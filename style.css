@@ -279,3 +279,20 @@ footer h5{
     line-height:1.8;
     font-weight:normal;
 }
+@media (max-width: 768px) {
+    
+
+    .secao-amor {
+        flex-direction: column; 
+    }
+
+    .propostaLogoCom, .texto-amor {
+        width: 100%; 
+        text-align: center; 
+    }
+
+  
+    .hero h1, .animaisAdocao h1 {
+        font-size: 24px;
+    }
+}

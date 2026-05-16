@@ -60,6 +60,11 @@ btnAnterior.addEventListener('click', function() {
 });
     }
 
+const Formulário =document.getElementById('seu-id-do-Formulário')
+if (Formulário){
+    Formulário.addEventListener('submit', function(event){
+        event.preventDefault();
+
 const nome = document.getElementById('nome').value;
 const telefone = document.getElementById('tel').value;
 const email = document.getElementById('email').value;
@@ -74,7 +79,7 @@ if (regexTelefone.test(telefone)){
 
 if(regexEmail.test(email)){
 
-    formulatio.submit();
+    formulario.submit();
     alert("Formulário Enviado com Sucesso!");
 
     }else{
@@ -85,6 +90,8 @@ if(regexEmail.test(email)){
 }
     }else{
     alert("Digite um nome completa valido ex(Bruno Silva) !!! ");
+}
+});
 }
 
     
