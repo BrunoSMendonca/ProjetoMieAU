@@ -26,6 +26,8 @@ As cores foram escolhidas para refletir os valores da ONG:
 - **Laranja (#F39200)**: Energia, calor e urgência para chamadas de ação (botões).
 - **Azul (#E0F4FF)**: Confiança, tranquilidade e cuidado com os animais.
 
+Próximos passos: Estruturação do Banco de Dados e estudos iniciais de Java (Back-end).
+
 # Autor
 
 Desenvolvido por [Bruno S mendonça// Mery accero condory]. 
