@@ -60,7 +60,9 @@ btnAnterior.addEventListener('click', function() {
 });
     }
 
-const formulario = document.getElementById('seu-id-do-formulario');
+
+
+const formulario = document.getElementById('Voluntario');
 
 if (formulario) {
     formulario.addEventListener('submit', function(event) { 
@@ -73,7 +75,7 @@ if (formulario) {
         const email = document.getElementById('email').value;
 
         const regexNome = /^[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+(?:\s+(?:[a-zà-ÿ']+|[A-ZÀ-ÿ][a-zA-ZÀ-ÿ']+)+)+$/;
-        const regexTelefone = /^\([1-9]{2}\) (?:9)?[0-9]{4}-[0-9]{4}$/;
+        const regexTelefone = /^\([1-9]{2}\)\s?(?:9)?[0-9]{4}-[0-9]{4}$/;
         const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
         if (regexNome.test(nome)) {
@@ -81,7 +83,8 @@ if (formulario) {
                 if (regexEmail.test(email)) {
                     
                     alert("Formulário Enviado com Sucesso!");
-                    formulario.submit(); 
+                    formulario.reset(); 
+    // trocar por fomulario.submit() após criação do back-end, para evitar erro
 
                 } else {
                     alert("Digite um E-mail Valido");
